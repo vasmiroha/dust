@@ -1,0 +1,75 @@
+{#json}
+    <!--if brand don't defined-->
+        {#contentError.value}
+            {contentError.name}
+        {/contentError.value}
+    <!--if brand don't defined-->
+
+    <!--if brand defined-->
+        <table id="comparisonTable">
+            <tbody>
+
+                <tr class="first_line">
+                    <td class="first_column">{.brandName.name}</td>
+                    <td class="data_cell">
+                        <!--header-->
+                            <table id="comparisonHeader">
+                              <tr>
+                                <td class="pa-brand-info-image">
+                                   <img src="{.imageLink.value}" alt="not found">
+                                </td>
+                              </tr>
+                              <tr class="pa-brand-info-header-desc-row">
+                                <td class="pa-brand-info-header-desc-block">
+                                  <p class="pa-brand-info-brand-name">{.brandName.value}</p>
+                                </td>
+                              </tr>
+                            </table>
+                         <!--header-->
+                    </td>
+                </tr>
+
+                <tr class="data_row">
+                    <td class="first_column"></td>
+                    <td class="data_cell"><p class="pa-brand-info__price">
+                        <span class="pa-brand-info__price-green">{.price.greenPrice}</span>
+                        <span class="pa-brand-info__price-grey">{.price.greyPrice}</span></p>
+                    </td>
+                </tr>
+                <tr class="data_row">
+                    <td class="first_column">{.rating.name}</td>
+                    <td class="data_cell">{.rating.value}</td>
+                </tr>
+                <tr class="data_row">
+                    <td class="first_column">{.easyApplication.name}</td>
+                    <td class="data_cell">{.easyApplication.value}</td>
+                </tr>
+                <!--builtInPrimerLabel-->
+                <tr class="data_row">
+                    <td class="first_column">{.builtInPrimer.name}</td>
+                    <td class="data_cell">{.builtInPrimer.value}</td>
+                </tr>
+                <tr class="data_row">
+                    <td class="first_column">{.durability.name}</td>
+                    <td class="data_cell">{.durability.value}</td>
+                </tr>
+                <tr class="data_row">
+                    <td class="first_column">{.scrubbability.name}</td>
+                    <td class="data_cell">{.scrubbability.value}</td>
+                </tr>
+                <tr class="data_row">
+                    <td class="first_column">{.moldAndMildewResistance.name}</td>
+                    <td class="data_cell">{.moldAndMildewResistance.value}</td>
+                </tr>
+                <tr class="data_row">
+                    <td class="first_column">stainFighting{.stainFighting.name}</td>
+                    <td class="data_cell">{.stainFighting.value}</td>
+                </tr>
+                <tr class="data_row">
+                    <td class="first_column">{.vocLevel.name}</td>
+                    <td class="data_cell">{.vocLevel.value}</td>
+                </tr>
+            </tbody>
+        </table>
+    <!--if brand defined-->
+{/json}

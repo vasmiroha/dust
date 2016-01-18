@@ -1,0 +1,751 @@
+.pa-ps-unsuccessful-search__content-wrapper {
+    font-family: GothamHTF-book, arial, helvetica, sans-serif;
+}
+
+.pa-ps-unsuccessful-search__attention-icon {
+    width: 15px;
+    height: 100px;
+    margin-top: 5px;
+    float: left;
+    background: url("/etc/designs/instore-experience/images/gr-my-list/attention-icon.png") no-repeat center top;
+}
+
+/* mine */
+
+.pa-ps-unsuccessful-search__message {
+    font-size: 24px;
+    max-width: 520px;
+    margin-left: 70px;
+}
+
+.pa-ps-unsuccessful-search__content-wrapper {
+    overflow: hidden;
+    padding: 50px 70px;
+    margin-top: 0;
+}
+
+.pa-ps-unsuccessful-search__title{
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight:bold;
+}
+/*  ==================================================
+    Clientlib Category: instore-experience.paint-assistant.base-page
+    file: base-paint-assistant.css
+    ==================================================
+    */
+
+
+html.CQ-edit-mode,
+.CQ-edit-mode body {
+    height: auto;
+}
+
+.CQ-preview-mode #cq-emulator {
+    margin: 0;
+}
+#cq-emulator-device {
+    margin: auto;
+}
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clrfx:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.header__wrapper * {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+
+.background-block {
+    min-width: 800px;  /* so that layout doesn't break if scroll appears in non-publish mode */
+    max-width: 1080px;
+    margin: 0 auto;
+    background-position: center bottom;
+    background-size: 100% auto;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    min-height: 1280px;
+}
+
+.CQ-publish-mode .background-block {
+    overflow: hidden;
+    height: 100vh;
+}
+@media (max-width: 900px) {
+    .background-block {
+        min-height: 1280px;
+    }
+    .CQ-publish-mode .background-block,
+    .CQ-preview-mode .background-block {
+        height: 100vh;
+    }
+}
+@media (min-width: 901px) {
+    .background-block {
+        min-height: 1910px;
+    }
+}
+
+#experience-body-wrapper {
+    overflow: initial;
+    height: auto;
+    background: none;
+    min-width: auto; /* do NOT set min-width: we have pages that display in narrow popup (on tablet it's <750px) */
+    max-width: 1080px;
+}
+
+.CQ-publish-mode #experience-body-wrapper{
+    height: 100vh;
+    margin: auto;
+}
+
+/*  TODO: (last sprint) Paint Assistant + mylist. Find ways to keep original selector for styles
+    selector was changed so that mylist can open - ideally it should be .pa-page__main-content AND NOT .content_wrapper
+    see also: apps/instore-experience/pages/abstract/base-paint-assistant/main.jsp
+ */
+.content_wrapper {
+    position: relative;             /* for overlay component positioning */
+}
+.CQ-preview-mode .content_wrapper,
+.CQ-publish-mode .content_wrapper{
+    position: absolute;
+    top: 158px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+@media (min-width: 900px) {
+    .CQ-preview-mode .content_wrapper,
+    .CQ-publish-mode .content_wrapper{
+        bottom: 77px;
+    }
+}
+
+div.carousel {
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .paint-assistant .pa-popup__popupcontainer{
+        width: 101%;
+        height:103%;
+    }
+
+    .footer {
+        display:none;
+    }
+}
+@media (min-width: 900px) {
+    .CQ-edit-mode .footer {
+        position: relative;
+    }
+    .CQ-publish-mode .footer {
+        display: block;
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        z-index: 8014;  /* above overlay 8004 */
+    }
+    .header__wrapper-footer {
+        max-width: 1080px;
+        margin: auto;
+    }
+    .footer_container{
+        position:fixed;
+        width:100%;
+        height: 76px;
+        overflow: hidden;
+        bottom: 0px;
+        right: 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* COLOR CONFLICT =========== */
+.base-paint-assistant__colorlist {
+    margin-bottom: 0;
+}
+
+.base-paint-assistant__colorlist-heading {
+    padding: 30px 0;
+    font-size: 18px;
+    /*font-weight: bold;*/
+    line-height: 1.7em;
+    max-width: 75%;
+    margin: 0 auto;
+    position: relative;
+}
+@media screen and (max-width: 900px) {
+    .base-paint-assistant__colorlist-heading {
+        max-width: 90%;
+    }
+}
+.base-paint-assistant__colorlist-heading:before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    padding: 0 20px;
+    background: url('/etc/designs/instore-experience/images/components/paint-assistant/exclam.png') no-repeat 50%;
+    height: 50px;
+    width: 20px;
+}
+.base-paint-assistant__colorlist-heading:after {
+    content: '';
+    position: absolute;
+    left: -20%;
+    right: -20%;
+    height: 1px;
+    background-color: #cccccc;
+    top: 100%;
+}
+@media screen and (max-width: 900px) {
+    .base-paint-assistant__colorlist-heading:after {
+        content: none;
+    }
+}
+
+.pa-paint-selector__formstep-subheading {
+
+}
+@media screen and (max-width: 900px) {
+    .pa-paint-selector__formstep-subheading {
+        font-size: 18px;
+    }
+}
+
+.base-paint-assistant__colorlist-container {
+    padding: 55px 0;
+}
+@media screen and (max-width: 900px) {
+    .base-paint-assistant__colorlist-container {
+        padding: 0 0 20px;
+    }
+}
+.base-paint-assistant__colorlist-item {
+    position: relative;
+    min-width: 770px; /* on big screen */
+    height: 180px;
+}
+@media screen and (max-width: 900px) {
+    .base-paint-assistant__colorlist-item {
+        min-width: 660px; /* on small screen */
+    }
+}
+.base-paint-assistant__colorlist-item > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.base-paint-assistant__colorlist-item +
+.base-paint-assistant__colorlist-item {
+    margin-top: 65px;
+}
+.base-paint-assistant__colorlist-colorbox {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    border: 1px solid #cccccc;
+}
+
+
+.base-paint-assistant__colorlist-info {
+    min-width: 80px;
+    max-width: 110px;
+    vertical-align: top;
+    margin-right: 160px;
+}
+@media screen and (max-width: 900px) {
+    .base-paint-assistant__colorlist-info {
+        margin-right: 35px;
+    }
+}
+
+.base-paint-assistant__colorlist-brand-images {
+    height: 40px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.base-paint-assistant__colorlist-colorname {
+    width: 140px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 1em;
+    font-family: "GothamHTF-Bold", arial, helvetica, sans-serif;
+}
+.base-paint-assistant__colorlist-colorcode {
+    color: #CC0000;
+    margin-bottom: 70px;
+    font-size: 18px;
+    font-family: 'GothamHTF-medium', arial, helvetica, sans-serif;
+}
+
+.base-paint-assistant__colorlist-brandlogo {
+    max-width: 215px;
+    max-height: 55px;
+    position: absolute;
+    top: 100%;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.base-paint-assistant__colorlist-confirm-btn {
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    padding: 15px 30px;
+    min-width: 280px;
+    text-transform: uppercase;
+    background-color: #12af4a;
+    border-bottom: 6px solid #0d8337;
+    font-family: "GothamHTF-medium", Arial, sans-serif;
+}
+
+.base-paint-assistant__colorlist-confirm-btn:active {
+    position: relative;
+    box-shadow: inset 1px 1px 1px 0 #0F8439;
+    border-top: 1px solid #0F8439;
+    border-left: 1px solid #0F8439;
+}
+
+/* FIX EMAIL-MY-LIST CONTENT BOX MODEL */
+.send-email-lightbox *,
+.send-email-lightbox *::after,
+.send-email-lightbox *::before {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.send-email-lightbox button {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* FIX ADDED TO MYLIST TOOLTIP */
+.paint-assistant .add-to-list-tooltip {
+    z-index: 8010;
+}
+
+.product-btn--list-add {
+    border-width: 3px 3px 3px 48px;
+    padding-left: 12px;
+}
+/*  ==================================================
+    Clientlib Category: instore-experience.paint-assistant.brand-comparison-page.component
+    file: pa-brand-comparison-page.css
+    ==================================================
+    */
+
+/* ===========================================================================
+== GENERIC STYLES
+============================================================================== */
+img {
+    width: inherit;
+    max-width: 110px;
+    height: inherit;
+    max-height: inherit;
+}
+body.noscroll {
+    position: fixed;
+}
+/*
+    This selector are more specific then common selector .CQ-publish-mode #experience-body-wrapper
+*/
+.CQ-publish-mode #experience-body-wrapper.experience-body-wrapper {
+    height: auto;
+}
+/* ===========================================================================
+== POPUP STYLES
+============================================================================== */
+
+.pa-brand-comparison-page__popupcontainer {
+    margin: 0 auto;
+    background: #666;
+    height: 100%;
+}
+@media (min-width: 1070px) {
+    .pa-brand-comparison-page__popupcontainer {
+        max-width: 1000px;
+    }
+}
+/* ===========================================================================
+== POPUP-SECTIONS
+============================================================================== */
+.pa-brand-comparison-page__popup {
+    min-height: 200px;
+}
+
+#comparisonTable tr {
+    background: #E7E7E7;
+}
+
+#comparisonTable td.data_cell, #comparisonTable td.first_column {
+    height: 90px;
+    vertical-align: middle;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+#comparisonHeader td {
+    margin: auto;
+    background: #FFF;
+}
+
+#comparisonTable tr.first_line {
+    height: 265px;
+    background: #FFF;
+    border: 1px solid #CCCBCB;
+}
+
+#comparisonTable td.first_column {
+    width: 141px;
+    max-width: 141px;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: "GothamHTF-bold";
+    border-right: 1px solid #CCCBCB;
+    border-left: 1px solid #CCCBCB;
+}
+
+#comparisonTable .first_line td:first-child {
+    border-right: 0px;
+}
+
+#comparisonTable td.data_cell {
+    font-size: 16px;
+    color: #666;
+    font-family: "GothamHTF-medium";
+}
+
+#comparisonTable td.data_cell:last-child {
+    border-right: 1px solid #CCCBCB;
+}
+#comparisonTable tr.data_row:last-child {
+    border-bottom: 1px solid #CCCBCB;
+}
+
+#comparisonTable tr.data_row:nth-child(2n+1){
+    background: #F7F7F7;
+}
+
+#comparisonTable .red-star-rating {
+    width: 0;
+    height: 14px;
+    background: url("/etc/designs/instore-experience/images/bbqs/stars.png") repeat-x 0 -11px;
+    background-size: 14px auto;
+    position:relative;
+}
+
+#comparisonTable .grey-star-rating{
+    position: relative;
+    width: 70px;
+    height: 13px;
+    background: url("/etc/designs/instore-experience/images/bbqs/stars.png") repeat-x 0 1px;
+    background-size: 14px auto;
+    margin: 0 auto;
+}
+
+td.image_header_block {
+    vertical-align: top;
+    padding-top: 50px;
+    text-align:center;
+}
+td.image_header_block table {
+    margin: auto;
+}
+
+td.pa-brand-info-image {
+    vertical-align: middle;
+}
+
+tr.pa-brand-info-header-desc-row > td {
+    padding-top: 10px;
+}
+
+td.pa-brand-info-header-desc-block  {
+    vertical-align: top;
+    text-align: center;
+    word-break: break-word;
+}
+/*  ==================================================
+    Clientlib Category: instore-experience.paint-assistant.brand-comparison-page.component
+    file: pa-brand-info.css
+    ==================================================
+    */
+
+/* ===========================================================================
+== BRAND-ROW (min-width: 905px - IFRAME WIDTH ON 1080px wide screen)
+============================================================================== */
+.pa-brand-info__brandrow,
+.pa-brand-info__body-author-mode .pa-brand-info__brandcomponent,
+.pa-brand-info__body-publish-mode .pa-brand-info.parbase.section {
+    min-height: 240px;
+    padding: 25px 0 20px;
+    position: relative;
+}
+
+@media (min-width: 905px) {
+    .pa-brand-info__brandrow,
+    .pa-brand-info__body-publish-mode .pa-brand-info.parbase.section {
+        width: 48%;
+        float: left;
+    }
+
+    .pa-brand-info__brandrow:nth-child(2n),
+    .pa-brand-info__body-publish-mode .pa-brand-info.parbase.section:nth-child(2n) {
+        margin-left: 4%;
+    }
+}
+
+.pa-brand-info__brandrow + .pa-brand-info__brandrow,
+.pa-brand-info__body-publish-mode .pa-brand-info.parbase.section {
+    border-top: 1px solid #ccc;
+}
+
+.pa-brand-info__brandrow:nth-child(2n+1),
+.pa-brand-info__body-publish-mode .pa-brand-info.parbase.section:nth-child(2n+1) {
+    clear: left;
+}
+
+.pa-brand-info__body-publish-mode .pa-brand-info.parbase.section:nth-child(1) {
+    border-top: none;
+}
+@media (min-width: 905px) {
+    .pa-brand-info__brandrow:nth-child(1),
+    .pa-brand-info__brandrow:nth-child(2),
+    .pa-brand-info__body-publish-mode .pa-brand-info.parbase.section:nth-child(1),
+    .pa-brand-info__body-publish-mode .pa-brand-info.parbase.section:nth-child(2) {
+        border-top: none;
+    }
+}
+
+@media screen and (max-width: 750px) { /* iframe width */
+    .pa-brand-info__body-publish-mode .pa-brand-info.parbase.section {
+        padding: 35px 0;
+        min-height: 360px;
+    }
+}
+
+/* ===========================================================================
+== BRAND-ROW PARTS styles
+============================================================================== */
+.pa-brand-info__brandrow-paintcan {
+    width: 66px;
+    height: 240px;
+    text-align: center;
+    background: white;
+}
+
+@media (min-width: 905px) {
+    .pa-brand-info__brandrow-paintcan {
+        width: 66px;
+    }
+}
+
+.brand-column-container {
+    width: 95px;
+    text-align: center;
+    float: left;
+}
+
+.pa-brand-info-cell {
+    height: 90px;
+    text-transform: capitalize;
+    display: inline-block;
+    vertical-align: middle;
+    clear: both;
+}
+
+.pa-brand-info-cell-item {
+    font-weight: bold;
+    display: inline-block;
+    clear: both;
+}
+
+.brand-column-container .pa-brand-info-cell:nth-child(even) {
+    background: #CCC;
+}
+.brand-column-container .pa-brand-info-cell:nth-child(odd) {
+    background: #FFF;
+}
+
+.pa-brand-info__imgwrapper {
+    max-height: 160px;
+    background: #ffffff 50% 50% / contain no-repeat;
+}
+/*
+@media screen and (max-width: 750px) { /* iframe width *
+    .pa-brand-info__imgwrapper {
+        min-height: 220px;
+    }
+}
+
+@media (min-width: 905px) {
+    .pa-brand-info__imgwrapper {
+        min-height: 160px;
+    }
+}*/
+
+.pa-brand-info__brandrow-info {
+    padding-left: 20px;
+    margin-left: 200px;
+}
+
+@media (min-width: 905px) {
+    .pa-brand-info__brandrow-info {
+        font-size: 0.9em;
+        margin-left: 150px;
+    }
+}
+
+.pa-brand-info__brandrow-descr {
+    margin: 0;
+    margin-top: 1em;
+    padding-left: 1.4em;
+    margin-right: -5px;
+    list-style: initial;
+    font-size: 12px;
+    font-family: "GothamHTF-medium";
+    /* margin pulls invisible :after element - helper to align vertcally*/
+}
+
+@media screen and (max-width: 750px) { /* iframe width */
+    .pa-brand-info__brandrow-descr {
+        font-size: 17.5px;
+        margin-top: 20px;
+    }
+}
+
+
+/* ===========================================================================
+== ELEMENT "INFO" styles for TEXT inside
+============================================================================== */
+.pa-brand-info__paintname,
+.pa-brand-info__price,
+.pa-brand-info__brandlogo {
+    display: block;
+    line-height: 1.3em;
+    text-transform: capitalize;
+}
+
+.pa-brand-info__paintname {
+    margin: 0;
+    font-size: 19.35px;
+    font-family: "GothamHTF-bold";
+}
+@media screen and (max-width: 750px) { /* iframe width */
+    .pa-brand-info__paintname {
+        font-size: 30px;
+    }
+}
+
+.pa-brand-info__brandDetails {
+    display: block;
+    font-size: 13px;
+    text-transform: capitalize;
+    font-family: "GothamHTF-medium";
+}
+@media screen and (max-width: 750px) {  /* iframe width */
+    .pa-brand-info__brandDetails {
+        font-size: 22px;
+    }
+}
+
+.pa-brand-info__price {
+    font-size: 17px;
+    font-family: "GothamHTF-bold";
+}
+
+.pa-brand-info__price-grey {
+    color: #a5a3a3;
+}
+
+.pa-brand-info__price-green {
+    color: #12b04a;
+}
+
+.pa-brand-info__brandlogo {
+    max-height: 45px;
+    min-height: 40px;
+    margin-bottom: 5px;
+}
+
+.pa-brand-info__brandrow-descr li {
+    line-height: 1.4em;
+}
+
+.pa-brand-info-brand-name {
+    font-family: "GothamHTF-bold";
+    font-size: 16px;
+    color: black;
+    padding-left: 0;
+    margin-left: 4px;
+    margin-right: 8px;
+}
+
+.pa-brand-info-brand-details {
+    font-family: "GothamHTF-medium";
+    font-size: 13px;
+    max-width: 110px;
+    color: black;
+    padding-left: 0;
+    padding-top: 4px;
+    margin-left: 4px;
+    margin-right: 8px;
+}
+
+/* ===========================================================================
+== REPLACED!!!! BRAND-ROW ALIGNMENT of ELEMENTS
+============================================================================== */
+/*-	------------------------- !!!!!!!! -----------------------------
+---	.:AFTER - invisible element that helps
+--- to vertically align text in .pa-brand-info__brandrow-descr
+--- it inherits min-height from the .BRAND-ROW,
+--- 'cuz h:100% / min-h: 100% doesn't help
+--- currently the best solution, comparing to float/table-cell/...
+--- -------------------------- !!!!!!!! ----------------------------- */
+.footnotes {
+    font-family: "GothamHTF-medium";
+    font-size: 16px;
+    background: #eee;
+    color: #666;
+}
+.footnotes p {
+    padding-top: 22px
+}
+.footnotes p:first-child {
+    padding-top: 30px; /** 8px + 22 px **/
+}
+.footnotes p:last-child {
+    padding-bottom: 10px;
+}
+

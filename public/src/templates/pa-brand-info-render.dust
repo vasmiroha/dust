@@ -1,0 +1,53 @@
+<table id="comparisonTable">
+    <tbody>
+    <tr class="first_line">
+        <td class="first_column" style='width:141px'>{rowsNaming.brandsLabel}</td>
+        <td class='data_cell'>
+            {#brandInfo}
+
+            {/brandInfo}
+        </td>
+    </tr>
+    <tr class="data_row">
+        <td class="first_column">{rowsNaming.priceLabel}</td>
+        <td class='data_cell'>
+            <p class="pa-brand-info__price">
+                <span class="pa-brand-info__price-green">{brandInfo.greenPrice}</span>
+                <span class="pa-brand-info__price-grey">{brandInfo.greyPrice}</span>
+            </p>
+        </td>
+    </tr>
+    <tr class="data_row">
+        <td class="first_column">{rowsNaming.ratingLabel}</td>
+        <td class='data_cell'>{brandInfo.averageRating}</td>
+    </tr>
+    <tr class="data_row">
+        <td class="first_column">{rowsNaming.easyApplicationLabel}</td>
+        <td class='data_cell'>{brandInfo.easyApplication}</td>
+    </tr>
+    <tr class="data_row">
+        <td class="first_column">{rowsNaming.builtInPrimerLabel}</td>
+        <td class='data_cell'>{brandInfo.builtInPrimer}</td>
+    </tr>
+    <tr class="data_row">
+        <td class="first_column">{rowsNaming.durabilityLabel}</td>
+        <td class='data_cell'>{brandInfo.durability}</td>
+    </tr>
+    <tr class="data_row">
+        <td class="first_column">{rowsNaming.scrubbabilityLabel}</td>
+        <td class='data_cell'>{brandInfo.scrubbability}</td>
+    </tr>
+    <tr class="data_row">
+        <td class="first_column">{rowsNaming.moldAndMildewResistanceLabel}</td>
+        <td class='data_cell'>{brandInfo.moldAndMildewResistance}</td>
+    </tr>
+    <tr class="data_row">
+        <td class="first_column">{rowsNaming.stainFightingLabel}</td>
+        <td class='data_cell'>{brandInfo.stainFighting}</td>
+    </tr>
+    <tr class="data_row">
+        <td class="first_column">{rowsNaming.vocLevelLabel}</td>
+        <td class='data_cell'>{brandInfo.vocLevel}</td>
+    </tr>
+    </tbody>
+</table>

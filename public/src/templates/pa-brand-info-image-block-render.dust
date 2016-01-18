@@ -1,0 +1,13 @@
+<table id="comparisonHeader">
+   <tr>
+    <td class="pa-brand-info-image">
+       <img src="{paintCanImageLink}" alt="">
+    </td>
+  </tr>
+  <tr class="pa-brand-info-header-desc-row">
+    <td class="pa-brand-info-header-desc-block">
+      <p class="pa-brand-info-brand-name">{brandName}</p>
+      <p class="pa-brand-info-brand-details">{brandDetails}</p>
+    </td>
+  </tr>
+</table>

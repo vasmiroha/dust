@@ -1,0 +1,14 @@
+<table id="comparisonTable">
+  <tbody>
+    <tr class="first_line"><td class="first_column">{brandsLabel}</td></tr>
+    <tr class="data_row"><td class="first_column">{priceLabel}</td></tr>
+    <tr class="data_row"><td class="first_column">{ratingLabel}</td></tr>
+    <tr class="data_row"><td class="first_column">{easyApplicationLabel}</td></tr>
+    <tr class="data_row"><td class="first_column">{builtInPrimerLabel}</td></tr>
+    <tr class="data_row"><td class="first_column">{durabilityLabel}</td></tr>
+    <tr class="data_row"><td class="first_column">{scrubbabilityLabel}</td></tr>
+    <tr class="data_row"><td class="first_column">{moldAndMildewResistanceLabel}</td></tr>
+    <tr class="data_row"><td class="first_column">{stainFightingLabel}</td></tr>
+    <tr class="data_row"><td class="first_column">{vocLevelLabel}</td></tr>
+  </tbody>
+</table>

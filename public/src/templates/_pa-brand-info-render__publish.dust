@@ -1,0 +1,35 @@
+<table id="comparisonTable">
+    <tbody>
+
+        <!-- rating-->
+            <tr class="data_row">
+                 {#json}
+                    {@first}
+                           <td class="first_column">{rating.name}</td>
+                    {/first}
+
+                    {#.rating}
+                         <td class="first_column">{.value}</td>
+                    {/.rating}
+                 {/json}
+            </tr>
+        <!-- rating-->
+
+        <!-- rating-->
+                <tr class="data_row">
+                     {#json}
+                        {@first}
+                               <td class="first_column">{rating.name}</td>
+                        {/first}
+
+                        {#.rating}
+                             <td class="first_column">{.value}</td>
+                        {/.rating}
+                     {/json}
+                </tr>
+        <!-- rating-->
+
+    </tbody>
+</table>
+
+
